@@ -4,6 +4,7 @@ AFRAME.registerComponent('player', {
   },
 
   init: function () {
+    console.log("player initialization")
     var el = this.el;
     var data = this.data;
   },
