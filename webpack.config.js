@@ -5,7 +5,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin")
 module.exports = {
   entry: {
     index: path.join(__dirname, "src", "index.js"),
-    objects: path.join(__dirname, "src", "objects.js")
+    app: path.join(__dirname, "src", "App.js")
   },
   output: {
     filename: "assets/js/[name]-[chunkhash].js"
@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, "index.html")
+      template: path.resolve(__dirname, "index.html"),
+      inject: "head"
     }),
     new VueLoaderPlugin()
   ]

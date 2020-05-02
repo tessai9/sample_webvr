@@ -1,12 +1,12 @@
-<template lang="html">
+<template lang="html" functional>
   <a-scene>
-    <a-box scale=".1 .1 .1"></a-box>
+    <a-entity geometry="primitive: box;" position="0 3 -5"></a-entity>
   </a-scene>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
 }
 </script>
 

@@ -5,7 +5,9 @@
   "author": "Tetsunari Sumiyoshi",
   "license": "MIT",
   "scripts": {
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development"
   },
   "dependencies": {
     "aframe": "^1.0.4",
