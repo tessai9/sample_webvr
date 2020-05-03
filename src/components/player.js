@@ -1,6 +1,6 @@
-AFRAME.registerComponent('player', {
+AFRAME.registerComponent("player", {
   schema: {
-    foo: {type: 'string'}
+    foo: {type: "string"}
   },
 
   init: function () {
