@@ -7,6 +7,7 @@ Vue.config.ignoredElements = [
   "a-assets",
   "a-camera",
   "a-entity",
+  "a-sky",
 ]
 
 window.addEventListener("DOMContentLoaded", () => {
