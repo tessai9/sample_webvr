@@ -1,22 +1,27 @@
 <template lang="html" functional>
-  <a-scene>
+  <a-scene physics="debug: true">
     <!-- player -->
     <a-entity
       id="rig"
-      movement-controls
+      movement-controls="speed: 0.2; constrainToNavMesh: true;"
     >
-      <a-camera
+      <a-entity
+        camera
         position="0 1.6 0"
         player
         look-controls
-      ></a-camera>
+      ></a-entity>
     </a-entity>
 
     <!-- sky -->
     <a-sky color="#6EBAA7"></a-sky>
 
     <!-- a box -->
-    <a-entity geometry="primitive: box;" position="0 2 -5"></a-entity>
+    <a-entity
+      geometry="primitive: box;"
+      position="0 2 -5"
+      static-body
+    ></a-entity>
   </a-scene>
 </template>
 
