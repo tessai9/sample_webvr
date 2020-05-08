@@ -3,13 +3,13 @@
     <!-- player -->
     <a-entity
       id="rig"
-      movement-controls="speed: 0.2;"
+      movement-controls="speed: 0.4;"
       position="0 0 7"
     >
       <a-entity
         camera
         player
-        look-controls
+        look-controls="pointerLockEnabled: true"
         position="0 1.6 0"
       ></a-entity>
     </a-entity>
@@ -25,11 +25,12 @@
     >
       <a-entity
         :key="column_index"
-        v-for="(value, column_index) in map_array"
-        v-if="value == 0"
+        v-for="(isRoad, column_index) in map_array"
+        v-if="!isRoad"
         :position="columnPosition(column_index)"
-        geometry="primitive: box; width: 5; height: 5; depth: 5;"
+        geometry="primitive: box;"
         material="color: gray;"
+        wall-box
         static-body
       ></a-entity>
     </a-entity>
