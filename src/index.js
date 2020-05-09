@@ -6,6 +6,7 @@ Vue.config.productionTip = false
 Vue.config.ignoredElements = [
   "a-scene",
   "a-assets",
+  "a-asset-item",
   "a-camera",
   "a-entity",
   "a-sky",
