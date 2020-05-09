@@ -14,7 +14,7 @@
 
 - [hubs](https://github.com/mozilla/hubs)ではReactを使っているが、ComponentにAframeタグは書いていないっぽい？
 
-- もしかするとVue ComponentとしてAframeのEntityは書けるが、`registerComponent()`はどうするか・・・
+- Vue ComponentとしてAframeのEntityは書けるが、`registerComponent()`はどうするか・・・
   - `HTMLWebpackPlugin({ inject: "head" })`で解決できる
 
 - Vueインスタンスは`DOMContentLoaded Event`時に作成すれば`Vue.$mount()`を効かせられる
@@ -25,3 +25,10 @@
       }).$mount("#app")
     })
     ```
+
+- boxオブジェクトに１枚のimageを適用すると、各面ごとに貼り付けられる
+
+- VueRouterを使ったワールド移動
+  - `<router-link tag="a-link">`とすればa-linkタグを生成することが可能ではあるが、遷移先の指定は結局`href="..."`の記述が必要
+  - もしかすると、`<router-view>`のみ使えるけども遷移するためのオブジェクト自体はa-linkタグを記載することになりそう
+    - もう少し実験しないといけない・・・

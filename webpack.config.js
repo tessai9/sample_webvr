@@ -24,10 +24,9 @@ module.exports = {
       template: path.resolve(__dirname, "index.html"),
       inject: "head"
     }),
-    new CopyWebpackPlugin({
-      from: "assets",
-      to: "assets"
-    }),
+    new CopyWebpackPlugin([
+      { from: "assets", to: "assets" }
+    ]),
     new VueLoaderPlugin()
   ]
 }
