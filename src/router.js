@@ -12,5 +12,6 @@ export const router = new VueRouter({
     { path: "/", component: Home },
     { path: "/labyrinth", component: Labyrinth },
     { path: "/warzone", component: WarZone },
-  ]
+  ],
+  base: "/"
 })
