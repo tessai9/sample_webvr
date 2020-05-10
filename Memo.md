@@ -31,4 +31,6 @@
 - VueRouterを使ったワールド移動
   - `<router-link tag="a-link">`とすればa-linkタグを生成することが可能ではあるが、遷移先の指定は結局`href="..."`の記述が必要
   - もしかすると、`<router-view>`のみ使えるけども遷移するためのオブジェクト自体はa-linkタグを記載することになりそう
+  - ただし、`<a-entity cursor></a-entity>`を使用すると、どこを向いていてもクリックイベントが発生してLabyrinthページに移動してしまう
   - VueRouterのデフォルトパスが「http://localhost:8080/#/」になっちゃうのは何とかならないだろうか・・・？
+  - Device DetectionでPCブラウザ用とVRブラウザ用の表示分けがしたい
