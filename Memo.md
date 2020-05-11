@@ -33,4 +33,5 @@
   - もしかすると、`<router-view>`のみ使えるけども遷移するためのオブジェクト自体はa-linkタグを記載することになりそう
   - ただし、`<a-entity cursor></a-entity>`を使用すると、どこを向いていてもクリックイベントが発生してLabyrinthページに移動してしまう
   - VueRouterのデフォルトパスが「http://localhost:8080/#/」になっちゃうのは何とかならないだろうか・・・？
+    - VueRouterの定義に`mode: "history"`を追加すると直せる
   - Device DetectionでPCブラウザ用とVRブラウザ用の表示分けがしたい

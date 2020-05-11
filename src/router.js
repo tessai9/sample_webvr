@@ -8,10 +8,10 @@ import WarZone from "./vue-components/WarZone.vue"
 Vue.use(VueRouter)
 
 export const router = new VueRouter({
+  mode: 'history',
   routes: [
     { path: "/", component: Home },
     { path: "/labyrinth", component: Labyrinth },
     { path: "/warzone", component: WarZone },
-  ],
-  base: "/"
+  ]
 })
