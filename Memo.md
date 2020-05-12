@@ -37,5 +37,5 @@
   - Device DetectionでPCブラウザ用とVRブラウザ用の表示分けがしたい
 
 - なぜかOculus QuestのブラウザだとVRモードになれない
-  - video扱いとなってしまう
-  - 原因が不明・・・・
+  - httpだとVRモードに入れない
+  - `webpack-dev-server --host 0.0.0.0 --https`で起動すればhttpsで接続できる

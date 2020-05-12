@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack-dev-server",
+    "serve:vr": "webpack-dev-server --host 0.0.0.0 --https",
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
     "lint": "eslint -c package.json src"
