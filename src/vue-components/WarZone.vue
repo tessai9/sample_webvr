@@ -1,5 +1,5 @@
 <template lang="html">
-  <a-scene physics="debug: true">
+  <a-scene physics="debug: true" vr-mode-ui="enabled: true">
     <!-- Assets -->
     <a-assets>
       <a-asset-item id="temple-obj" src="/assets/obj/temple-of-eshmoun/source/model.obj"></a-asset-item>

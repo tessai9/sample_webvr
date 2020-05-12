@@ -35,3 +35,7 @@
   - VueRouterのデフォルトパスが「http://localhost:8080/#/」になっちゃうのは何とかならないだろうか・・・？
     - VueRouterの定義に`mode: "history"`を追加すると直せる
   - Device DetectionでPCブラウザ用とVRブラウザ用の表示分けがしたい
+
+- なぜかOculus QuestのブラウザだとVRモードになれない
+  - video扱いとなってしまう
+  - 原因が不明・・・・

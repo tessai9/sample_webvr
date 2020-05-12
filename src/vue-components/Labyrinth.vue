@@ -1,5 +1,5 @@
 <template lang="html">
-  <a-scene physics="debug: true">
+  <a-scene physics="debug: true" vr-mode-ui="enabled: true">
     <!-- assets -->
     <a-assets>
       <img id="wall" src="/assets/wall.jpg" />
@@ -13,7 +13,7 @@
       <a-entity
         camera
         player
-        look-controls="pointerLockEnabled: true"
+        look-controls
         position="0 1.6 0"
       ></a-entity>
     </a-entity>
