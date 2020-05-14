@@ -14,8 +14,9 @@
   "dependencies": {
     "aframe": "^1.0.4",
     "aframe-extras": "^6.1.0",
-    "ammo-debug-drawer": "^1.0.1",
-    "ammo.js": "^0.0.10",
+    "aframe-physics-system": "^4.0.1",
+    "ammo-debug-drawer": "github:infinitelee/ammo-debug-drawer",
+    "ammo.js": "github:mozillareality/ammo.js#hubs/master",
     "copy-webpack-plugin": "^5.1.1",
     "three": "^0.116.1",
     "three-ammo": "^1.0.9",

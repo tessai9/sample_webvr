@@ -11,6 +11,7 @@ Vue.config.ignoredElements = [
   "a-entity",
   "a-sky",
   "a-link",
+  "a-ocean",
 ]
 
 window.addEventListener("DOMContentLoaded", () => {

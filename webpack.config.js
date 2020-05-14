@@ -1,11 +1,15 @@
 const path = require("path")
+// const fs = require("fs")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const VueLoaderPlugin = require("vue-loader/lib/plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
+  // node: {
+  //   fs: "empty"
+  // },
   entry: {
-    app: path.join(__dirname, "src", "app.js"),
+    app: path.join(__dirname, "src", "App.js"),
     index: path.join(__dirname, "src", "index.js"),
   },
   output: {
@@ -16,7 +20,7 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader"
-      }
+      },
     ]
   },
   plugins: [
