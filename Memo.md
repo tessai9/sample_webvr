@@ -39,3 +39,6 @@
 - なぜかOculus QuestのブラウザだとVRモードになれない
   - httpだとVRモードに入れない
   - `webpack-dev-server --host 0.0.0.0 --https`で起動すればhttpsで接続できる
+
+- 壁との衝突判定
+  - raycasterを使ってcamera(player)と壁との距離を取得すれば壁をすり抜けないようにできそう
