@@ -9,13 +9,13 @@
       id="rig"
       movement-controls="speed: 0.4;"
       position="0 0 7"
+      raycaster
       player
     >
       <a-entity
         camera
-        look-controls
+        look-controls="pointerLockEnabled: true"
         position="0 1.6 0"
-        raycaster="objects: .wall; far: 1.5;"
       ></a-entity>
     </a-entity>
 
@@ -35,7 +35,7 @@
         :position="columnPosition(column_index)"
         geometry="primitive: box;"
         material="src: #wall"
-        :class="{ isRoad : wall }"
+        class="wall"
         wall-box
       ></a-entity>
     </a-entity>

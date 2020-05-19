@@ -42,4 +42,5 @@
 
 - 壁との衝突判定
   - raycasterを使ってcamera(player)と壁との距離を取得すれば壁をすり抜けないようにできそう
-  - かなりお粗末なつくりではあるが、Labyrinthにてraycasterの`raycaster-intersection`, `raycaster-intersection-cleared`イベントによって`movement-controls.enabled`のtrue/falseを切り替えるようにしてみた
+  - raycaster-intersectionイベントをplayerに付与してみたが、検知したオブジェクトを取得できない・・・なぜ・・・？
+  - もし可能であれば、接触面から移動不可な方向を取得できるようにしたい
