@@ -3,7 +3,6 @@ AFRAME.registerComponent("player", {
   dependencies: ["raycaster"],
   multiple: true,
 
-  schema: {},
   init: function () {
     // current position
     this.currentPosition = { x: 0, y: 0, z: 0 }
@@ -11,11 +10,9 @@ AFRAME.registerComponent("player", {
     this.normalVec = null
 
     this.el.addEventListener("raycaster-intersection", (e) => {
-      console.log("intersection!")
       this.normalVec = e.detail.intersections[0].face.normal
     })
     this.el.addEventListener("raycaster-intersection-cleared", () => {
-      console.log("intersect cleard!")
       this.normalVec = null
     })
   },
@@ -38,5 +35,4 @@ AFRAME.registerComponent("player", {
       this.el.object3D.position.z = this.currentPosition.z
     }
   },
-  update: function() {}
 });
