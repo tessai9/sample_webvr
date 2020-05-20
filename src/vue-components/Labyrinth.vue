@@ -9,7 +9,10 @@
       id="rig"
       movement-controls="speed: 0.4;"
       position="0 0 7"
-      raycaster
+      raycaster="objects: .wall; far: 1; direction: 0 0 -1;"
+      raycaster__back="objects: .wall; far: 1; direction: 0 0 1;"
+      raycaster__left="objects: .wall; far: 1; direction: 1 0 0;"
+      raycaster__right="objects: .wall; far: 1; direction: -1 0 0;"
       player
     >
       <a-entity
