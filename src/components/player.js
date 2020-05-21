@@ -21,17 +21,11 @@ AFRAME.registerComponent("player", {
       Object.assign(this.currentPosition, this.el.object3D.position)
       return
     }
-    // 右側面の衝突
-    if (this.normalVec.x < 0) {
+    // 側面の衝突
+    if (this.normalVec.x < 0 || this.normalVec.x > 0) {
       this.el.object3D.position.x = this.currentPosition.x
-    // 左側面の衝突
-    }else if (this.normalVec.x > 0) {
-      this.el.object3D.position.x = this.currentPosition.x
-    // 正面の衝突
-    }else if (this.normalVec.z > 0) {
-      this.el.object3D.position.z = this.currentPosition.z
-    // 背面の衝突
-    }else if (this.normalVec.z < 0) {
+    // 正面、背後の衝突
+    }else if (this.normalVec.z > 0 || this.normalVec.z < 0) {
       this.el.object3D.position.z = this.currentPosition.z
     }
   },
