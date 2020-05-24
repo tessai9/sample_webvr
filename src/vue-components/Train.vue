@@ -1,12 +1,15 @@
 <template lang="html">
   <a-scene>
-    <a-assets></a-assets>
+    <a-assets>
+      <audio id="train_running" src="/assets/sounds/on_a_train1.mp3" preload="auto" />
+    </a-assets>
 
     <!-- sky -->
     <a-sky
       scale="3 3 3"
       position="0 0 -600"
       color="#222222"
+      sound="src: #train_running; loop: true; volume: 6; autoplay: true;"
     ></a-sky>
 
     <!-- Train -->

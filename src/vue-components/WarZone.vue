@@ -15,8 +15,8 @@
       obj-model="obj: #temple-obj; mtl: #temple-mtl;"
       position="39.821 -16.500 -8.433"
       sound="src: #world-battle-sound; loop: true; volume: 4; autoplay: true;"
-      sound__tank="src: #running-tank; loop: true; volume: 4; autoplay; true;"
-      sound__cannon="src: #cannon-firing; loop: true; volume: 4; autoplay; true;"
+      sound__tank="src: #running-tank; loop: true; volume: 4; autoplay: true;"
+      sound__cannon="src: #cannon-firing; loop: true; volume: 4; autoplay: true;"
     ></a-entity>
 
     <!-- Sky -->
