@@ -45,3 +45,7 @@
   - できた（Labyrinthで実現）
     - 法線ベクトルを取得し、そのデータからどの面でraycasterが反応したのかを判断する
     - raycasterが反応していないうちは現在位置を記憶し続け、反応したタイミングでその時の`x` or `z`の座標を固定する
+
+- GLTFモデルの透過
+  - PNGの透過は`material="transparent: true;"`で透過できるが、GLTFモデルはそれが効かない
+  - opacity? あるいはGLTFの設定か何か？
