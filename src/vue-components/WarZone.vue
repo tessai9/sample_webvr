@@ -145,6 +145,45 @@
       position="138.600 -4.440 -63.459"
       rotation="0 -164.655 0"
     ></a-entity>
+
+    <!-- messerschmitt bf-109 -->
+    <a-entity
+      gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
+      scale="1.5 1.5 1.5"
+      position="182 51 -7"
+      rotation="5.5 72 29"
+    ></a-entity>
+    <a-entity
+      gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
+      scale="1.5 1.5 1.5"
+      position="202 51 -16"
+      rotation="5.5 72 29"
+    ></a-entity>
+    <a-entity
+      gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
+      scale="1.5 1.5 1.5"
+      position="190 51 15"
+      rotation="5.5 72 29"
+    ></a-entity>
+    <!-- ju-87 -->
+    <a-entity
+      gltf-model="/assets/obj/aircraft/ju-87/scene.gltf"
+      scale="1.8 1.8 1.8"
+      position="141 58 -65"
+      rotation="5.5 -96 29"
+    ></a-entity>
+    <a-entity
+      gltf-model="/assets/obj/aircraft/ju-87/scene.gltf"
+      scale="1.8 1.8 1.8"
+      position="111 58 -95"
+      rotation="5.5 -96 29"
+    ></a-entity>
+    <a-entity
+      gltf-model="/assets/obj/aircraft/ju-87/scene.gltf"
+      scale="1.8 1.8 1.8"
+      position="132 58 -107"
+      rotation="5.5 -96 29"
+    ></a-entity>
   </a-scene>
 </template>
 

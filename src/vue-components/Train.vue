@@ -22,7 +22,7 @@
     <!-- Player -->
     <a-entity
       camera
-      wasd-controls="acceleration: 3000"
+      wasd-controls="acceleration: 4000"
       position="0 191 -140"
       look-controls="pointerLockEnabled: true"
       train-player
