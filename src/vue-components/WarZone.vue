@@ -1,5 +1,5 @@
 <template lang="html">
-  <a-scene>
+  <a-scene v-show="allModelsLoaded">
     <!-- Assets -->
     <a-assets>
       <img id="sunset" src="/assets/sunset.jpg" />
@@ -38,132 +38,150 @@
 
     <!-- Tanks -->
     <!-- Elefant -->
-    <a-entity
+    <!-- <a-entity
       gltf-model="/assets/obj/tank/elefant/scene.gltf"
       scale="0.3 0.3 0.3"
       position="125.163 -3.746 -90.186"
       rotation="6.443 22.151 3.383"
-    ></a-entity>
+    ></a-entity> -->
     <a-entity
       gltf-model="/assets/obj/tank/elefant/scene.gltf"
       scale="0.3 0.3 0.3"
-      position="127.954 -4.062 -82.973"
+      position="128 -4 -83"
       rotation="4.070 22.046 -0.710"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/elefant/scene.gltf"
       scale="0.3 0.3 0.3"
-      position="132.476 -4.533 -74.777"
-      rotation="-1.993 25.482 4.277"
+      position="132.5 -4.5 -75"
+      rotation="-2 25.5 4"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <!-- Panzer IV -->
     <a-entity
       gltf-model="/assets/obj/tank/panzer_iv/scene.gltf"
       scale="3.5 3.5 3.5"
-      position="87.561 -1.429 -47.208"
-      rotation="-8.468 -65.608 -0.502"
+      position="87.5 -1.5 -47"
+      rotation="-8.5 -65 -0.5"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panzer_iv/scene.gltf"
       scale="3.5 3.5 3.5"
-      position="97.571 -2.514 -49.944"
-      rotation="-5.457 -99.095 0.362"
+      position="97.5 -2.5 -50"
+      rotation="-5.5 -99 0"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panzer_iv/scene.gltf"
       scale="3.5 3.5 3.5"
-      position="107.571 -3.229 -49.373"
-      rotation="-6.015 -91.745 -0.856"
+      position="107.5 -3 -49"
+      rotation="-6 -92 -1"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panzer_iv/scene.gltf"
       scale="3.5 3.5 3.5"
-      position="117.571 -3.483 -49.373"
-      rotation="-2.667 -91.642 0.553"
+      position="117.5 -3.5 -49"
+      rotation="-2.5 -91.5 0.5"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panzer_iv/scene.gltf"
       scale="3.5 3.5 3.5"
-      position="127.571 -3.794 -49.373"
-      rotation="-1.999 -91.434 -3.838"
+      position="127.5 -4 -49"
+      rotation="-2 -91 -4"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <!-- Panther -->
     <a-entity
       gltf-model="/assets/obj/tank/panther/scene.gltf"
       scale="1.5 1.5 1.5"
-      position="84.645 -3.720 -70.123"
-      rotation="-0.489 -50.114 -4.168"
+      position="84.5 -4 -70"
+      rotation="-0.5 -50 -4"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panther/scene.gltf"
       scale="1.5 1.5 1.5"
-      position="80.211 -3.345 -76.700"
-      rotation="-1.597 -50.145 -3.600"
+      position="80 -3 -76"
+      rotation="-1.5 -50 -3.5"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/panther/scene.gltf"
       scale="1.5 1.5 1.5"
-      position="76.703 -2.511 -83.147"
-      rotation="4.669 -49.961 -2.293"
+      position="76.5 -2.5 -83"
+      rotation="4.5 -50 -2"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <!-- Tiger -->
     <a-entity
       gltf-model="/assets/obj/tank/tiger/scene.gltf"
       scale="1.3 1.3 1.3"
-      position="112.068 -5.448 -23.287"
-      rotation="-0.995 -61.604 -3.898"
+      position="112 -5.5 -23"
+      rotation="-1 -61.5 -4"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/tiger/scene.gltf"
       scale="1.3 1.3 1.3"
-      position="132.574 -6.539 -11.029"
-      rotation="0.696 -86.378 -2.569"
+      position="132.5 -6.5 -11"
+      rotation="0.5 -86 -2.5"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/tiger/scene.gltf"
       scale="1.3 1.3 1.3"
-      position="112.496 -5.119 -36.585"
-      rotation="-3.495 -53.832 -4.326"
+      position="112.5 -5 -36.5"
+      rotation="-3.5 -54 -4"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <!-- Maus -->
-    <a-entity
+    <!-- <a-entity
       gltf-model="/assets/obj/tank/maus/scene.gltf"
       scale="7 7 7"
       position="74.274 -2.678 -40.378"
       rotation="0 -59.070 0"
-    ></a-entity>
+    ></a-entity> -->
     <!-- jadgpanther -->
     <a-entity
       gltf-model="/assets/obj/tank/jadgpanther/scene.gltf"
       scale="2.5 2.5 2.5"
-      position="126.986 -5.140 -60.362"
-      rotation="0 -164.655 0"
+      position="127 -5 -60"
+      rotation="0 -164.5 0"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/tank/jadgpanther/scene.gltf"
       scale="2.5 2.5 2.5"
-      position="138.600 -4.440 -63.459"
-      rotation="0 -164.655 0"
+      position="138.5 -4.5 -63.5"
+      rotation="0 -164.5 0"
+      @model-loaded="loadedEvent()"
     ></a-entity>
-
+    <!-- Aircrafts -->
     <!-- messerschmitt bf-109 -->
     <a-entity
       gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
       scale="1.5 1.5 1.5"
       position="182 51 -7"
       rotation="5.5 72 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
       scale="1.5 1.5 1.5"
       position="202 51 -16"
       rotation="5.5 72 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/aircraft/bf-109/scene.gltf"
       scale="1.5 1.5 1.5"
       position="190 51 15"
       rotation="5.5 72 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <!-- ju-87 -->
     <a-entity
@@ -171,25 +189,46 @@
       scale="1.8 1.8 1.8"
       position="141 58 -65"
       rotation="5.5 -96 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/aircraft/ju-87/scene.gltf"
       scale="1.8 1.8 1.8"
       position="111 58 -95"
       rotation="5.5 -96 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
     <a-entity
       gltf-model="/assets/obj/aircraft/ju-87/scene.gltf"
       scale="1.8 1.8 1.8"
       position="132 58 -107"
       rotation="5.5 -96 29"
+      @model-loaded="loadedEvent()"
     ></a-entity>
   </a-scene>
 </template>
 
 <script>
+const NumberOfModels = 21
+
 export default {
   name: "WarZone",
+  data() {
+    return {
+      loaded_model_number: 0,
+    }
+  },
+  computed: {
+    allModelsLoaded() {
+      return NumberOfModels == this.loaded_model_number
+    }
+  },
+  methods: {
+    loadedEvent(){
+      console.log(this.loaded_model_number)
+      this.loaded_model_number++
+    }
+  }
 }
 </script>
 
