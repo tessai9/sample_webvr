@@ -4,21 +4,48 @@
     <a-assets>
       <img id="wall" src="/assets/wall.jpg" />
     </a-assets>
+
+    <!-- Title -->
+    <a-entity
+      id="start_button"
+      geometry="primitive: plane; width: 2; height: 1;"
+      position="5 0 2"
+    >
+      <a-entity
+        text="value: Start; align: center;"
+        scale="10 10 1"
+      ></a-entity>
+    </a-entity>
+
     <!-- player -->
     <a-entity
       id="rig"
       movement-controls="speed: 0.4;"
-      position="0 0 7"
+      position="5 0 7"
       raycaster="objects: .wall; far: 1; direction: 0 0 -1;"
       raycaster__back="objects: .wall; far: 1; direction: 0 0 1;"
       raycaster__left="objects: .wall; far: 1; direction: 1 0 0;"
       raycaster__right="objects: .wall; far: 1; direction: -1 0 0;"
       player
     >
+      <!-- camera -->
       <a-entity
         camera
         look-controls="pointerLockEnabled: true"
         position="0 1.6 0"
+      ></a-entity>
+      <!-- player hands -->
+      <a-entity
+        id="left-hand"
+        hand-controls="hand: left;"
+        gltf-model="/assets/obj/hands/leftHandLow.glb"
+        raycaster="showLine: true; far: 5;"
+      ></a-entity>
+      <a-entity
+        id="right-hand"
+        hand-controls="hand: right;"
+        gltf-model="/assets/obj/hands/rightHandLow.glb"
+        raycaster="showLine: true; far: 5;"
       ></a-entity>
     </a-entity>
 
