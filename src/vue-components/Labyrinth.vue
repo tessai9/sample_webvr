@@ -7,7 +7,6 @@
 
     <!-- Title -->
     <a-entity
-      id="start_button"
       geometry="primitive: plane; width: 2; height: 1;"
       position="5 0 2"
     >
@@ -39,11 +38,13 @@
         id="left-hand"
         hand-controls="hand: left;"
         gltf-model="/assets/obj/hands/leftHandLow.glb"
+        raycaster="objects: #start_button; showLine: true; far: 5;"
       ></a-entity>
       <a-entity
         id="right-hand"
         hand-controls="hand: right;"
         gltf-model="/assets/obj/hands/rightHandLow.glb"
+        raycaster="objects: #start_button; showLine: true; far: 5;"
       ></a-entity>
     </a-entity>
 

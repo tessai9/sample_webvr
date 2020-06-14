@@ -45,6 +45,7 @@
   - できた（Labyrinthで実現）
     - 法線ベクトルを取得し、そのデータからどの面でraycasterが反応したのかを判断する
     - raycasterが反応していないうちは現在位置を記憶し続け、反応したタイミングでその時の`x` or `z`の座標を固定する
+  - Player Entityにraycaster付きのHand Entityを追加してみたが、上記のイベントに引っ張られてしまうのでid or classを判定して衝突が起こらない実装が必要
 
 - GLTFモデルの透過
   - PNGの透過は`material="transparent: true;"`で透過できるが、GLTFモデルはそれが効かない
