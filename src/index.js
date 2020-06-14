@@ -1,6 +1,8 @@
 import Vue from "vue"
 import App from "./vue-components/App.vue"
+import VrHomePage from "./vue-components/VrHomePage.vue"
 import { router } from "./router.js"
+import { checkEnvironment } from "./utils/device-utils.js"
 
 Vue.config.productionTip = false
 Vue.config.ignoredElements = [
@@ -17,6 +19,6 @@ Vue.config.ignoredElements = [
 window.addEventListener("DOMContentLoaded", () => {
   new Vue({
     router,
-    render: h => h(App),
+    render: h => h(checkEnvironment() ? VrHomePage : App),
   }).$mount("#app")
 })
