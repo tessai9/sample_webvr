@@ -39,13 +39,11 @@
         id="left-hand"
         hand-controls="hand: left;"
         gltf-model="/assets/obj/hands/leftHandLow.glb"
-        raycaster="showLine: true; far: 5;"
       ></a-entity>
       <a-entity
         id="right-hand"
         hand-controls="hand: right;"
         gltf-model="/assets/obj/hands/rightHandLow.glb"
-        raycaster="showLine: true; far: 5;"
       ></a-entity>
     </a-entity>
 
