@@ -19,13 +19,14 @@
     <!-- player -->
     <a-entity
       id="rig"
-      movement-controls="speed: 0.4;"
+      ref="player"
+      :movement-controls="playerMoveControles"
       position="5 0 7"
       raycaster="objects: .wall; far: 1; direction: 0 0 -1;"
       raycaster__back="objects: .wall; far: 1; direction: 0 0 1;"
       raycaster__left="objects: .wall; far: 1; direction: 1 0 0;"
       raycaster__right="objects: .wall; far: 1; direction: -1 0 0;"
-      player
+      labyrinth-player
     >
       <!-- camera -->
       <a-entity
@@ -81,6 +82,16 @@ export default {
   data() {
     return {
       map_data: WALL_MAP,
+    }
+  },
+  computed: {
+    playerMoveControles() {
+      const moveControlProperty = {
+        enabled: this.$store.getters.getPlayerMovableState,
+        speed: 0.4,
+      }
+      console.log(moveControlProperty)
+      return moveControlProperty
     }
   },
   methods: {

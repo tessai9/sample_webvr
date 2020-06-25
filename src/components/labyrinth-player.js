@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-AFRAME.registerComponent("player", {
+AFRAME.registerComponent("labyrinth-player", {
   dependencies: ["raycaster"],
   multiple: true,
 
@@ -29,4 +29,10 @@ AFRAME.registerComponent("player", {
       this.el.object3D.position.z = this.currentPosition.z
     }
   },
+  play: function() {
+    console.log("played!");
+  },
+  pause: function() {
+    console.log("paused!");
+  }
 });
