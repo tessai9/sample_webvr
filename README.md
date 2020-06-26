@@ -54,3 +54,8 @@ AFrameを使って色々検証してみて、分かったことを下にメモ�
 - GLTFモデルの透過
   - PNGの透過は`material="transparent: true;"`で透過できるが、GLTFモデルはそれが効かない
   - opacity? あるいはGLTFの設定か何か？
+
+- [aframe-state-component](https://www.npmjs.com/package/aframe-state-component/v/3.3.1)
+  - Aframeの状態管理パッケージ
+  - moonriderでは使われている
+  - Vue.jsであればVuexで代替可能な気がする
