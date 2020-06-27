@@ -7,6 +7,7 @@
 
     <!-- Title -->
     <a-entity
+      v-if="!playerMovable"
       geometry="primitive: plane; width: 2; height: 1;"
       position="5 0 2"
     >
@@ -92,6 +93,9 @@ export default {
       }
       console.log(moveControlProperty)
       return moveControlProperty
+    },
+    playerMovable() {
+      return this.$store.getters.getPlayerMovableState
     }
   },
   methods: {
