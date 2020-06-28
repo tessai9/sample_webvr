@@ -9,7 +9,7 @@ import Train from "./vue-components/Train.vue"
 Vue.use(VueRouter)
 
 export const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes: [
     { path: "/", component: Home },
     { path: "/labyrinth", component: Labyrinth },

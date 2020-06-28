@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 AFRAME.registerComponent("train-player", {
-  init(): {}
+  init: function(){}
 })

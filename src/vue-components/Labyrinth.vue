@@ -7,6 +7,7 @@
 
     <!-- Title -->
     <a-entity
+      id="start_button"
       v-if="!playerMovable"
       geometry="primitive: plane; width: 2; height: 1;"
       position="5 0 2"
@@ -16,6 +17,13 @@
         scale="10 10 1"
       ></a-entity>
     </a-entity>
+
+    <!-- text -->
+    <a-entity
+      geometory="primitive: text;"
+      position="5 0 -2.5"
+      :text="debugValue"
+    ></a-entity>
 
     <!-- player -->
     <a-entity
@@ -41,12 +49,14 @@
         hand-controls="hand: left;"
         gltf-model="/assets/obj/hands/leftHandLow.glb"
         raycaster="objects: #start_button; showLine: true; far: 5;"
+        hand
       ></a-entity>
       <a-entity
         id="right-hand"
         hand-controls="hand: right;"
         gltf-model="/assets/obj/hands/rightHandLow.glb"
         raycaster="objects: #start_button; showLine: true; far: 5;"
+        hand
       ></a-entity>
     </a-entity>
 
@@ -96,7 +106,13 @@ export default {
     },
     playerMovable() {
       return this.$store.getters.getPlayerMovableState
-    }
+    },
+    debugValue() {
+      return {
+        value: this.$store.getters.getPlayerMovableState,
+        width: 5
+      }
+    },
   },
   methods: {
     rowPosition(row) {

@@ -14,12 +14,12 @@ export default new Vuex.Store({
   },
   mutations: {
     switchPlayerMovable(state, payload) {
-      state.player_movable = payload
+      state.player_movable = payload.movable
     },
   },
   actions: {
-    updatePlayerMovable({commit}, movable) {
-      commit("switchPlayerMovable", movable)
+    updatePlayerMovable(context, payload) {
+      context.commit("switchPlayerMovable", payload)
     }
   }
 })
